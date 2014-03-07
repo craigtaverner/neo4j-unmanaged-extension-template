@@ -28,6 +28,7 @@ public class MyServiceFunctionalTest {
     @Test
     public void shouldReturnFriends() throws IOException {
         NeoServer server = CommunityServerBuilder.server()
+                .onPort(7575)
                 .withThirdPartyJaxRsPackage("org.neo4j.example.unmanagedextension", MOUNT_POINT)
                 .build();
         server.start();
